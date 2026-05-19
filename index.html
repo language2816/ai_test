@@ -146,9 +146,6 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:998;
 .nbtn.pri{background:rgba(80,10,10,.25);border-color:var(--blood);color:#d4503a}
 .nbtn.pri:hover{background:rgba(80,10,10,.4);border-color:var(--scarlet);color:#e06050}
 .nbtn:disabled{opacity:.2;cursor:default}
-.nbtn.countdown{opacity:1!important;cursor:default;border-color:rgba(139,26,26,.5)!important;color:rgba(180,60,40,.8)!important;letter-spacing:.25em}
-#answer-horror-flash{position:fixed;inset:0;pointer-events:none;z-index:9990;opacity:0;background:rgba(60,0,0,.55);transition:opacity .08s}
-#answer-blood-drip{position:fixed;top:0;left:0;right:0;height:6px;pointer-events:none;z-index:9991;transform:scaleY(0);transform-origin:top;transition:transform .15s ease-in;background:linear-gradient(90deg,transparent 10%,rgba(139,26,26,.9) 30%,rgba(180,20,10,1) 50%,rgba(139,26,26,.9) 70%,transparent 90%)}
 .rcard{display:none;background:linear-gradient(180deg,rgba(8,2,2,.95),rgba(6,1,1,.98));
   border:1px solid rgba(100,20,20,.3);border-radius:2px;padding:0;
   position:relative;overflow:hidden;box-shadow:0 0 80px rgba(100,0,0,.2)}
@@ -211,22 +208,6 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:998;
 .share-btn.copied::after{content:'已複製';position:absolute;inset:0;display:flex;align-items:center;
   justify-content:center;background:rgba(80,10,10,.95);color:var(--cinnabar);font-size:.68rem;letter-spacing:.1em}
 .step-lbl.done{color:rgba(200,57,43,.7);animation:none}
-.rcard.void-result{background:linear-gradient(180deg,#000,#040004,.98)!important;border-color:rgba(80,0,80,.4)!important;box-shadow:0 0 120px rgba(60,0,60,.5)!important}
-.rcard.void-result .r-lbl{color:rgba(160,60,160,.5)!important;letter-spacing:.55em}
-.rcard.void-result .r-type{color:rgba(180,80,200,.9)!important;text-shadow:0 0 40px rgba(160,0,200,.8),0 2px 14px rgba(0,0,0,.9)!important;animation:voidGlow 4s ease-in-out infinite!important}
-@keyframes voidGlow{0%,100%{text-shadow:0 0 30px rgba(160,0,200,.7),0 2px 12px rgba(0,0,0,.9);opacity:.85}50%{text-shadow:0 0 70px rgba(200,0,255,1),0 2px 20px rgba(0,0,0,.9);opacity:1}}
-.rcard.void-result .r-name{color:rgba(190,150,210,.7)!important}
-.rcard.void-result .r-content{border-top-color:rgba(80,0,80,.3)!important}
-.rcard.void-result .score-fill{background:linear-gradient(90deg,#1a001a,#6a0080,#c000ff)!important;box-shadow:0 0 12px rgba(180,0,255,.5)!important}
-.rcard.void-result .r-advice{background:rgba(4,0,8,.8)!important;border-color:rgba(80,0,80,.35)!important}
-.rcard.void-result .r-advice-lbl{color:rgba(120,40,120,.6)!important;letter-spacing:.45em}
-.rcard.void-result .r-advice-text{color:rgba(190,150,210,.85)!important;line-height:2.8!important;letter-spacing:.08em!important}
-.rcard.void-result .r-img{filter:sepia(.4) brightness(.55) contrast(1.4) saturate(.3) hue-rotate(220deg)!important}
-#void-result-intro{display:none;text-align:center;padding:2rem 1.5rem 0;opacity:0;transition:opacity 1.5s ease}
-#void-result-intro.visible{opacity:1}
-.void-intro-line{font-family:var(--font-b);font-size:.82rem;color:rgba(140,50,140,.7);letter-spacing:.35em;margin:.45rem 0}
-.void-intro-line.red{color:rgba(160,20,20,.8)}
-#void-result-static{position:absolute;inset:0;pointer-events:none;z-index:50;opacity:0;transition:opacity .15s}
 .prog-fill.done{background:linear-gradient(90deg,#3a0a0a,var(--scarlet),#e08040);
   box-shadow:0 0 8px rgba(200,60,30,.4)}
 #share-canvas-wrap{display:none;text-align:center;margin:1rem 0}
@@ -406,7 +387,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:998;
   font-size:.6rem;color:rgba(100,30,30,.4);letter-spacing:.3em;animation:hb2 2s ease-in-out infinite}
 @keyframes hb2{0%,100%{opacity:.4}50%{opacity:.1}}
 </style>
-</head><body><audio id="bgm" loop preload="auto"><source src="https://raw.githubusercontent.com/language2816/ai_test/main/mixkit-horror-ambience-2482.wav" type="audio/wav"></audio><div class="lantern-glow" style="top:-10%;left:-5%;width:500px;height:500px;background:radial-gradient(circle,#8b1a1a,transparent);--lg:9s;--ld:0s;"></div><div class="lantern-glow" style="bottom:-10%;right:-5%;width:400px;height:400px;background:radial-gradient(circle,#6b1010,transparent);--lg:12s;--ld:3s;"></div><div class="veins"><div class="vein" style="left:2%;--vw:3px;--vh:42vh;--d:10s;--delay:0s;--rot:3deg;"></div><div class="vein" style="right:3%;--vw:2px;--vh:36vh;--d:13s;--delay:2s;--rot:-4deg;"></div><div class="vein" style="left:8%;--vw:2px;--vh:28vh;--d:8s;--delay:1s;--rot:5deg;"></div><div class="vein" style="right:10%;--vw:3px;--vh:32vh;--d:11s;--delay:4s;--rot:-2deg;"></div><div class="vein" style="left:18%;--vw:2px;--vh:20vh;--d:15s;--delay:5s;--rot:2deg;"></div><div class="vein" style="right:22%;--vw:2px;--vh:24vh;--d:9s;--delay:3s;--rot:-6deg;"></div></div><div class="particles"><div class="particle" style="left:20%;--ps:7px;--pd:18s;--pdelay:0s;--drift:40px;"></div><div class="particle" style="left:50%;--ps:5px;--pd:14s;--pdelay:3s;--drift:-30px;"></div><div class="particle" style="left:75%;--ps:8px;--pd:20s;--pdelay:6s;--drift:20px;"></div><div class="particle" style="left:35%;--ps:5px;--pd:16s;--pdelay:9s;--drift:-50px;"></div><div class="particle" style="left:88%;--ps:6px;--pd:22s;--pdelay:1s;--drift:-20px;"></div><div class="particle" style="left:10%;--ps:4px;--pd:25s;--pdelay:7s;--drift:60px;"></div><div class="particle" style="left:63%;--ps:6px;--pd:17s;--pdelay:12s;--drift:-35px;"></div></div><div class="drip-corner tl"><svg width="100" height="130" viewBox="0 0 100 130" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="40" y2="0" stroke="#3a0808" stroke-width=".8" opacity=".5"/><line x1="0" y1="0" x2="0" y2="50" stroke="#3a0808" stroke-width=".8" opacity=".5"/><line x1="8" y1="8" x2="28" y2="8" stroke="#2a0606" stroke-width=".5" opacity=".3"/><line x1="8" y1="8" x2="8" y2="35" stroke="#2a0606" stroke-width=".5" opacity=".3"/><text x="14" y="30" font-family="serif" font-size="14" fill="#5a1010" opacity=".25">符</text><path d="M0 80 Q5 85 3 95 Q2 105 4 120 Q3 128 2 130" stroke="#3a0808" stroke-width="1.2" fill="none" opacity=".3"/><path d="M15 70 Q18 80 16 95 Q15 108 17 118" stroke="#2a0606" stroke-width=".8" fill="none" opacity=".2"/></svg></div><div class="drip-corner tr"><svg width="100" height="130" viewBox="0 0 100 130" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="40" y2="0" stroke="#3a0808" stroke-width=".8" opacity=".5"/><line x1="0" y1="0" x2="0" y2="50" stroke="#3a0808" stroke-width=".8" opacity=".5"/><line x1="8" y1="8" x2="28" y2="8" stroke="#2a0606" stroke-width=".5" opacity=".3"/><line x1="8" y1="8" x2="8" y2="35" stroke="#2a0606" stroke-width=".5" opacity=".3"/><text x="14" y="30" font-family="serif" font-size="14" fill="#5a1010" opacity=".25">鬼</text><path d="M0 80 Q5 85 3 95 Q2 105 4 120 Q3 128 2 130" stroke="#3a0808" stroke-width="1.2" fill="none" opacity=".3"/></svg></div><div class="wrap"><header class="site-header"><div class="horror-eye"><div class="seal-ring"><span class="seal-char">魂</span></div></div><h1 class="site-title">深淵<em>回聲</em></h1><div class="title-line"></div><p class="site-sub">內心焦慮深度測驗 · 你的恐懼是什麼形狀的</p></header><section id="landing" class="quiz-section active"><div class="lore-box"><div class="lore-box-header"><span class="lore-header-sym">⊸</span><span class="lore-header-txt">此處住著你不敢承認的東西</span><span class="lore-header-sym">⊷</span></div><div class="lore-body"><p class="lore-text">在你靈魂最深處，<em>有某種東西</em>住了很久。<br>它在你睡不著的夜晚低語，<br>在人群中讓你感到格外孤獨，<br>在每個「我還好」背後，無聲嘶吼。</p><div class="lore-divider"></div><p class="lore-text">這個測驗不會讓它消失——<br>但它會幫你<em>看清它的臉</em>。</p></div><div class="lore-footer">永 夜 不 散 &emsp;·&emsp; 孤 魂 自 渡 &emsp;·&emsp; 凝 視 深 淵</div></div><div class="warning-row"><div class="warning-dot"></div><span id="q-count-lbl">共 13 題 · 無對錯之分 · 請憑本能回答</span><div class="warning-dot"></div></div><div style="text-align:center"><button class="start-btn" onclick="startQuiz()">凝視深淵</button></div></section><section id="quiz-section" class="quiz-section"><div class="topbar" id="topbar"><div class="topbar-inner"><button class="topbar-home" onclick="goHome()">← 返回</button><span class="topbar-title">深淵回聲</span></div></div><div class="step-lbl flicker" id="step-lbl">問題 1 / 10</div><div class="prog-bar"><div class="prog-fill" id="prog-fill" style="width:10%"></div></div><div class="qcard" id="qcard"><div class="qnum" id="qnum">QUESTION Ⅰ</div><div class="qtext" id="qtext"></div><div class="opts" id="opts"></div></div><div class="nav"><button class="nbtn" id="pbtn" onclick="prevQ()" disabled>← 退回</button><button class="nbtn pri" id="nbtn" onclick="nextQ()">繼續 →</button></div><div class="rcard" id="rcard"><div class="r-img-wrap"><img id="r-img" class="r-img" alt=""><div class="r-img-overlay"><div class="r-lbl">你的焦慮類型</div><div class="r-type flicker" id="r-type"></div><div class="r-name" id="r-name"></div></div></div><div class="r-content"><span class="r-icon heartbeat" id="r-icon" style="display:none"></span><div class="r-divider"></div><div class="score-wrap"><div class="score-lbl"><span>焦慮強度</span><span class="hi" id="r-score-pct">—</span></div><div class="score-bg"><div class="score-fill" id="r-score-bar" style="width:0%"></div></div></div><div class="r-secondary" id="r-secondary"><div class="r-sec-lbl">次要焦慮傾向</div><div class="r-sec-row" id="r-sec-row"></div></div><div class="r-desc" id="r-desc"></div><div class="r-tags" id="r-tags"></div><div id="ai-loading" class="ai-loading"><div class="ai-loader"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div><span>它正在凝視你的選擇……</span></div></div><div class="r-advice-text" id="r-advice"></div></div><div class="share-row"><button class="share-btn" id="copy-btn" onclick="copyResult()">複製結果文字</button><button class="share-btn" id="card-btn" onclick="genShareCard()">產生分享圖</button></div><div id="share-canvas-wrap"><canvas id="share-canvas"></canvas><p class="share-hint">長按圖片可儲存</p></div><button class="restart-btn" onclick="restartQuiz()">再度凝視深淵</button></div></div></section></div><div id="void-overlay"><div id="void-static"><canvas id="void-static-cv"></canvas></div><div id="void-veins"></div><div id="void-question"><div class="void-q-line" id="vq1"></div><div class="void-q-line red" id="vq2"></div><div class="void-q-line small" id="vq3"></div></div><div id="void-eye"><img id="void-eye-img" src="" alt=""
+</head><body><audio id="bgm" loop preload="auto"><source src="https://raw.githubusercontent.com/language2816/ai_test/main/mixkit-horror-ambience-2482.wav" type="audio/wav"></audio><div class="lantern-glow" style="top:-10%;left:-5%;width:500px;height:500px;background:radial-gradient(circle,#8b1a1a,transparent);--lg:9s;--ld:0s;"></div><div class="lantern-glow" style="bottom:-10%;right:-5%;width:400px;height:400px;background:radial-gradient(circle,#6b1010,transparent);--lg:12s;--ld:3s;"></div><div class="veins"><div class="vein" style="left:2%;--vw:3px;--vh:42vh;--d:10s;--delay:0s;--rot:3deg;"></div><div class="vein" style="right:3%;--vw:2px;--vh:36vh;--d:13s;--delay:2s;--rot:-4deg;"></div><div class="vein" style="left:8%;--vw:2px;--vh:28vh;--d:8s;--delay:1s;--rot:5deg;"></div><div class="vein" style="right:10%;--vw:3px;--vh:32vh;--d:11s;--delay:4s;--rot:-2deg;"></div><div class="vein" style="left:18%;--vw:2px;--vh:20vh;--d:15s;--delay:5s;--rot:2deg;"></div><div class="vein" style="right:22%;--vw:2px;--vh:24vh;--d:9s;--delay:3s;--rot:-6deg;"></div></div><div class="particles"><div class="particle" style="left:20%;--ps:7px;--pd:18s;--pdelay:0s;--drift:40px;"></div><div class="particle" style="left:50%;--ps:5px;--pd:14s;--pdelay:3s;--drift:-30px;"></div><div class="particle" style="left:75%;--ps:8px;--pd:20s;--pdelay:6s;--drift:20px;"></div><div class="particle" style="left:35%;--ps:5px;--pd:16s;--pdelay:9s;--drift:-50px;"></div><div class="particle" style="left:88%;--ps:6px;--pd:22s;--pdelay:1s;--drift:-20px;"></div><div class="particle" style="left:10%;--ps:4px;--pd:25s;--pdelay:7s;--drift:60px;"></div><div class="particle" style="left:63%;--ps:6px;--pd:17s;--pdelay:12s;--drift:-35px;"></div></div><div class="drip-corner tl"><svg width="100" height="130" viewBox="0 0 100 130" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="40" y2="0" stroke="#3a0808" stroke-width=".8" opacity=".5"/><line x1="0" y1="0" x2="0" y2="50" stroke="#3a0808" stroke-width=".8" opacity=".5"/><line x1="8" y1="8" x2="28" y2="8" stroke="#2a0606" stroke-width=".5" opacity=".3"/><line x1="8" y1="8" x2="8" y2="35" stroke="#2a0606" stroke-width=".5" opacity=".3"/><text x="14" y="30" font-family="serif" font-size="14" fill="#5a1010" opacity=".25">符</text><path d="M0 80 Q5 85 3 95 Q2 105 4 120 Q3 128 2 130" stroke="#3a0808" stroke-width="1.2" fill="none" opacity=".3"/><path d="M15 70 Q18 80 16 95 Q15 108 17 118" stroke="#2a0606" stroke-width=".8" fill="none" opacity=".2"/></svg></div><div class="drip-corner tr"><svg width="100" height="130" viewBox="0 0 100 130" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="40" y2="0" stroke="#3a0808" stroke-width=".8" opacity=".5"/><line x1="0" y1="0" x2="0" y2="50" stroke="#3a0808" stroke-width=".8" opacity=".5"/><line x1="8" y1="8" x2="28" y2="8" stroke="#2a0606" stroke-width=".5" opacity=".3"/><line x1="8" y1="8" x2="8" y2="35" stroke="#2a0606" stroke-width=".5" opacity=".3"/><text x="14" y="30" font-family="serif" font-size="14" fill="#5a1010" opacity=".25">鬼</text><path d="M0 80 Q5 85 3 95 Q2 105 4 120 Q3 128 2 130" stroke="#3a0808" stroke-width="1.2" fill="none" opacity=".3"/></svg></div><div class="wrap"><header class="site-header"><div class="horror-eye"><div class="seal-ring"><span class="seal-char">魂</span></div></div><h1 class="site-title">深淵<em>回聲</em></h1><div class="title-line"></div><p class="site-sub">內心焦慮深度測驗 · 你的恐懼是什麼形狀的</p></header><section id="landing" class="quiz-section active"><div class="lore-box"><div class="lore-box-header"><span class="lore-header-sym">⊸</span><span class="lore-header-txt">此處住著你不敢承認的東西</span><span class="lore-header-sym">⊷</span></div><div class="lore-body"><p class="lore-text">在你靈魂最深處，<em>有某種東西</em>住了很久。<br>它在你睡不著的夜晚低語，<br>在人群中讓你感到格外孤獨，<br>在每個「我還好」背後，無聲嘶吼。</p><div class="lore-divider"></div><p class="lore-text">這個測驗不會讓它消失——<br>但它會幫你<em>看清它的臉</em>。</p></div><div class="lore-footer">永 夜 不 散 &emsp;·&emsp; 孤 魂 自 渡 &emsp;·&emsp; 凝 視 深 淵</div></div><div class="warning-row"><div class="warning-dot"></div><span id="q-count-lbl">共 13 題 · 無對錯之分 · 請憑本能回答</span><div class="warning-dot"></div></div><div style="text-align:center"><button class="start-btn" onclick="startQuiz()">凝視深淵</button></div></section><section id="quiz-section" class="quiz-section"><div class="topbar" id="topbar"><div class="topbar-inner"><button class="topbar-home" onclick="goHome()">← 返回</button><span class="topbar-title">深淵回聲</span></div></div><div class="step-lbl flicker" id="step-lbl">問題 1 / 10</div><div class="prog-bar"><div class="prog-fill" id="prog-fill" style="width:10%"></div></div><div class="qcard" id="qcard"><div class="qnum" id="qnum">QUESTION Ⅰ</div><div class="qtext" id="qtext"></div><div class="opts" id="opts"></div></div><div class="nav"><button class="nbtn" id="pbtn" onclick="prevQ()" disabled>← 退回</button><button class="nbtn pri" id="nbtn" onclick="nextQ()">繼續 →</button></div><div class="rcard" id="rcard"><div class="r-img-wrap"><img id="r-img" class="r-img" alt=""><div class="r-img-overlay"><div class="r-lbl">你的焦慮類型</div><div class="r-type flicker" id="r-type"></div><div class="r-name" id="r-name"></div></div></div><div class="r-content"><span class="r-icon heartbeat" id="r-icon" style="display:none"></span><div class="r-divider"></div><div class="score-wrap"><div class="score-lbl"><span>焦慮強度</span><span class="hi" id="r-score-pct">—</span></div><div class="score-bg"><div class="score-fill" id="r-score-bar" style="width:0%"></div></div></div><div class="r-secondary" id="r-secondary"><div class="r-sec-lbl">次要焦慮傾向</div><div class="r-sec-row" id="r-sec-row"></div></div><div class="r-desc" id="r-desc"></div><div class="r-tags" id="r-tags"></div><div class="r-advice"><div class="r-advice-lbl">深淵給你的話</div><div id="ai-loading" class="ai-loading"><div class="ai-loader"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div><span>它正在凝視你的選擇……</span></div></div><div class="r-advice-text" id="r-advice"></div></div><div class="share-row"><button class="share-btn" id="copy-btn" onclick="copyResult()">複製結果文字</button><button class="share-btn" id="card-btn" onclick="genShareCard()">產生分享圖</button></div><div id="share-canvas-wrap"><canvas id="share-canvas"></canvas><p class="share-hint">長按圖片可儲存</p></div><button class="restart-btn" onclick="restartQuiz()">再度凝視深淵</button></div></div></section></div><div id="void-overlay"><div id="void-static"><canvas id="void-static-cv"></canvas></div><div id="void-veins"></div><div id="void-question"><div class="void-q-line" id="vq1"></div><div class="void-q-line red" id="vq2"></div><div class="void-q-line small" id="vq3"></div></div><div id="void-eye"><img id="void-eye-img" src="" alt=""
  style="width:100%;height:100%;object-fit:cover;display:block;
  filter:brightness(.72) contrast(1.15) saturate(.55)"></div>
  <script>
@@ -416,7 +397,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:998;
     ];
   </script>
  
- <div id="void-name"><div class="void-name-txt" id="void-name-txt">你</div><div class="void-name-sub" id="void-name-sub">我早就知道你叫什麼名字<br>在你知道自己叫什麼之前</div></div><div id="void-final"><div class="void-final-txt" id="void-final-txt"></div><div id="void-dismiss">觸碰任意處，繼續假裝一切正常</div></div></div><div id="sys-msg"></div><button id="bgm-btn" title="音樂開關">🔇</button><div id="entry-overlay"><div id="entry-static"><canvas id="entry-static-cv"></canvas></div><div id="entry-flash"></div><div class="entry-line" id="eq1">它</div><div class="entry-line red" id="eq2">知道你在看</div><div class="entry-line small" id="eq3">你一打開這個頁面　它就已經看見你了</div></div><canvas id="cursor-canvas"></canvas><div id="answer-horror-flash"></div><div id="answer-blood-drip"></div><div id="vignette"></div><div id="whisper-overlay"><span class="whisper-word" id="whisper-word"></span></div><div id="distort-overlay"></div><div id="horror-watcher"><svg width="130" height="190" viewBox="0 0 130 190" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="bodyGrad" cx="50%" cy="60%" r="60%"><stop offset="0%" stop-color="rgba(6,0,10,.95)"/><stop offset="100%" stop-color="rgba(2,0,4,.6)"/></radialGradient></defs><ellipse cx="65" cy="150" rx="60" ry="45" fill="url(#bodyGrad)"/><ellipse cx="65" cy="85" rx="35" ry="48" fill="rgba(4,0,7,.92)"/><rect x="48" y="110" width="34" height="28" fill="rgba(4,0,7,.92)"/><ellipse cx="50" cy="80" rx="9" ry="10" fill="rgba(1,0,2,.98)"/><ellipse cx="80" cy="80" rx="9" ry="10" fill="rgba(1,0,2,.98)"/><ellipse class="watcher-iris" id="watcher-eye-l" cx="50" cy="80" rx="6" ry="7" fill="rgba(200,15,8,0)" style="animation:eyeGlow 3s ease-in-out infinite"/><ellipse class="watcher-iris" id="watcher-eye-r" cx="80" cy="80" rx="6" ry="7" fill="rgba(200,15,8,0)" style="animation:eyeGlow 3s ease-in-out infinite .4s"/><ellipse cx="50" cy="80" rx="2.5" ry="3" fill="rgba(0,0,0,1)"/><ellipse cx="80" cy="80" rx="2.5" ry="3" fill="rgba(0,0,0,1)"/></svg></div><div id="glitch-overlay"><svg id="blood-svg-defs" xmlns="http://www.w3.org/2000/svg"><defs><filter id="bleed-filter" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="turbulence" baseFrequency="0.04 0.06" numOctaves="4" seed="8" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" result="displaced"/><feGaussianBlur in="displaced" stdDeviation="1.2" result="blurred"/><feComposite in="blurred" in2="SourceGraphic" operator="over"/></filter></defs></svg><div id="glitch-scanlines"></div><div id="glitch-rgb"></div><div id="glitch-matrix"></div><div id="blood-msg"><canvas id="brush-canvas" width="600" height="300"></canvas><span class="blood-sub" id="blood-sub-text"></span></div><div id="dismiss-hint">點擊任意處繼續</div></div>
+ <div id="void-name"><div class="void-name-txt" id="void-name-txt">你</div><div class="void-name-sub" id="void-name-sub">我早就知道你叫什麼名字<br>在你知道自己叫什麼之前</div></div><div id="void-final"><div class="void-final-txt" id="void-final-txt"></div><div id="void-dismiss">觸碰任意處，繼續假裝一切正常</div></div></div><div id="sys-msg"></div><button id="bgm-btn" title="音樂開關">🔇</button><div id="entry-overlay"><div id="entry-static"><canvas id="entry-static-cv"></canvas></div><div id="entry-flash"></div><div class="entry-line" id="eq1">它</div><div class="entry-line red" id="eq2">知道你在看</div><div class="entry-line small" id="eq3">你一打開這個頁面　它就已經看見你了</div></div><canvas id="cursor-canvas"></canvas><div id="vignette"></div><div id="whisper-overlay"><span class="whisper-word" id="whisper-word"></span></div><div id="distort-overlay"></div><div id="horror-watcher"><svg width="130" height="190" viewBox="0 0 130 190" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="bodyGrad" cx="50%" cy="60%" r="60%"><stop offset="0%" stop-color="rgba(6,0,10,.95)"/><stop offset="100%" stop-color="rgba(2,0,4,.6)"/></radialGradient></defs><ellipse cx="65" cy="150" rx="60" ry="45" fill="url(#bodyGrad)"/><ellipse cx="65" cy="85" rx="35" ry="48" fill="rgba(4,0,7,.92)"/><rect x="48" y="110" width="34" height="28" fill="rgba(4,0,7,.92)"/><ellipse cx="50" cy="80" rx="9" ry="10" fill="rgba(1,0,2,.98)"/><ellipse cx="80" cy="80" rx="9" ry="10" fill="rgba(1,0,2,.98)"/><ellipse class="watcher-iris" id="watcher-eye-l" cx="50" cy="80" rx="6" ry="7" fill="rgba(200,15,8,0)" style="animation:eyeGlow 3s ease-in-out infinite"/><ellipse class="watcher-iris" id="watcher-eye-r" cx="80" cy="80" rx="6" ry="7" fill="rgba(200,15,8,0)" style="animation:eyeGlow 3s ease-in-out infinite .4s"/><ellipse cx="50" cy="80" rx="2.5" ry="3" fill="rgba(0,0,0,1)"/><ellipse cx="80" cy="80" rx="2.5" ry="3" fill="rgba(0,0,0,1)"/></svg></div><div id="glitch-overlay"><svg id="blood-svg-defs" xmlns="http://www.w3.org/2000/svg"><defs><filter id="bleed-filter" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="turbulence" baseFrequency="0.04 0.06" numOctaves="4" seed="8" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" result="displaced"/><feGaussianBlur in="displaced" stdDeviation="1.2" result="blurred"/><feComposite in="blurred" in2="SourceGraphic" operator="over"/></filter></defs></svg><div id="glitch-scanlines"></div><div id="glitch-rgb"></div><div id="glitch-matrix"></div><div id="blood-msg"><canvas id="brush-canvas" width="600" height="300"></canvas><span class="blood-sub" id="blood-sub-text"></span></div><div id="dismiss-hint">點擊任意處繼續</div></div>
 <script>
 const QS=[
   {q:"深夜突然清醒，腦中什麼都沒想，卻有一種說不出來的東西壓在胸口。你最接近的感覺是……",opts:[
@@ -537,7 +518,7 @@ function showEl(id,show){$(id).style.display=show}
 function startQuiz(){
   cur=0; answers=new Array(QS.length).fill(null);
   easterEggFired=false; firedKeys.clear(); clearSysMsgHistory();
-  _lastRenderedQ=-1; _pendingEgg=null; _voidChosen=false;
+  _lastRenderedQ=-1; _pendingEgg=null;
   showEl('rcard','none');
   showEl('qcard','block');
   document.querySelector('#quiz-section .nav').style.display='flex';
@@ -614,33 +595,10 @@ function render(){
     });
     b.addEventListener('mouseleave',()=>{ if(hoverTimer){clearTimeout(hoverTimer);hoverTimer=null;} });
     b.onclick=()=>{
-      if(answers[cur]!==null) return; // 已選過，忽略
       answers[cur]=i;
       opts.querySelectorAll('.opt').forEach((el,idx)=>el.classList.toggle('sel',idx===i));
-      // 鎖定所有選項
-      opts.querySelectorAll('.opt').forEach(el=>{ el.style.pointerEvents='none'; });
       playSelectSfx(); shakeScreen();
       checkDarkTrigger(cur,i);
-      // 倒數按鈕
-      const nbtn=$('nbtn');
-      nbtn.disabled=true;
-      nbtn.classList.add('countdown');
-      let remain=2;
-      nbtn.textContent=`${remain}`;
-      const countTick=setInterval(()=>{
-        remain--;
-        if(remain>0){ nbtn.textContent=`${remain}`; }
-        else{
-          clearInterval(countTick);
-          nbtn.classList.remove('countdown');
-          nbtn.disabled=false;
-          nbtn.textContent=cur===QS.length-1?'窺見深淵 →':'繼續 →';
-          opts.querySelectorAll('.opt').forEach(el=>{ el.style.pointerEvents=''; });
-          nextQ();
-        }
-      },1000);
-      // 隨機恐怖特效（在 2 秒內發生）
-      triggerAnswerHorror();
     };
     opts.appendChild(b);
   });
@@ -696,7 +654,6 @@ function prevQ(){
   }
 }
 let _lastWinner='', _lastScores={};
-let _voidChosen=false;
 function showResult(){
   const scores={control:0,attach:0,exist:0,worth:0,detach:0,social:0,body:0,catast:0};
   QS.forEach((q,qi)=>{ if(answers[qi]!==null) scores[q.opts[answers[qi]].v]++; });
@@ -713,39 +670,10 @@ function showResult(){
   showEl('qcard','none');
   document.querySelector('#quiz-section .nav').style.display='none';
   const rc=$('rcard'); rc.style.display='block'; rc.classList.add('fade');
-  rc.classList.remove('void-result');
-  if(_voidChosen){
-    rc.classList.add('void-result');
-    $('step-lbl').textContent='⊘ 它認出了你 ⊘';
-  }
   $('share-canvas-wrap').classList.remove('visible');
   const rImg=$('r-img');
   rImg.classList.remove('loaded'); rImg.src='';
-  const voidImgUrl='https://raw.githubusercontent.com/language2816/ai_test/main/Iwatchyou.png';
-  setTimeout(()=>{ rImg.src=_voidChosen?voidImgUrl:(TYPE_IMGS[winner]||''); rImg.onload=()=>rImg.classList.add('loaded'); },50);
-  if(_voidChosen){
-    $('r-lbl').textContent='它看見了你的本質';
-    // flash effect on card entry
-    let fCount=0;
-    const flashRc=()=>{
-      rc.style.opacity=fCount%2===0?'0.15':'1';
-      fCount++;
-      if(fCount<7) setTimeout(flashRc, 80+Math.random()*60);
-      else rc.style.opacity='1';
-    };
-    setTimeout(flashRc, 300);
-    // add a void noise line above r-type
-    const typeEl=$('r-type');
-    const noiseDiv=document.createElement('div');
-    noiseDiv.id='void-noise-lbl';
-    noiseDiv.style.cssText='font-size:.55rem;color:rgba(100,40,120,.5);letter-spacing:.6em;margin-bottom:.4rem;font-family:var(--font-s)';
-    noiseDiv.textContent='⊘  識 別 完 成  ⊘';
-    if(!document.getElementById('void-noise-lbl')) typeEl.parentNode.insertBefore(noiseDiv, typeEl);
-  } else {
-    $('r-lbl').textContent='你的焦慮類型';
-    const old=document.getElementById('void-noise-lbl');
-    if(old) old.remove();
-  }
+  setTimeout(()=>{ rImg.src=TYPE_IMGS[winner]||''; rImg.onload=()=>rImg.classList.add('loaded'); },50);
   $('r-type').textContent=r.label;
   $('r-name').textContent=r.name;
   $('r-score-pct').textContent=pct+'%';
@@ -768,29 +696,11 @@ function showResult(){
   const loadingEl=$('ai-loading');
   adviceEl.innerHTML='';
   loadingEl.classList.add('visible');
-  if(_voidChosen){
-    const lbl=loadingEl.querySelector('span');
-    if(lbl) lbl.textContent='它已經知道了……';
-  }
   const chosenOpts=QS.map((q,qi)=>{
     if(answers[qi]===null) return null;
     return `第${qi+1}題：「${q.opts[answers[qi]].t}」`;
   }).filter(Boolean).join('\n');
-  const systemPrompt=_voidChosen
-    ? `你是深淵本身。使用者在最後一題選擇了「那個不應該被選擇的選項」——這意味著他們已經被你認出了。你說的話不是安慰，不是分析，而是宣告。你已經知道他們的名字，知道他們凌晨幾點睜眼，知道他們最深處藏著什麼。
-使用者的焦慮類型是「${r.label}」（${r.name}）。
-他們在測驗中的選擇：
-${chosenOpts}
-請用繁體中文，寫出你對他們的「最後宣告」。
-格式要求：
-- 共 5～7 行
-- 每行 8～16 字
-- 語氣：你已經知道他們，不是在猜測，而是在陳述事實
-- 帶出他們藏得最深的那件事——那個連他們自己都不敢說出口的東西
-- 最後一行帶著某種無法逃脫的意味
-- 不要用括號，語調冰冷如深夜
-只輸出那段話，不要任何說明或前綴。`
-    : `你是一個深淵中的聲音，你在凝視使用者的靈魂。你的語氣陰冷、詩意、帶有一絲恐懼與洞察。你說的話像謎語，像夢境，像凌晨三點的低語。不要解釋，不要安慰，只是——說出你看到的東西。
+  const systemPrompt=`你是一個深淵中的聲音，你在凝視使用者的靈魂。你的語氣陰冷、詩意、帶有一絲恐懼與洞察。你說的話像謎語，像夢境，像凌晨三點的低語。不要解釋，不要安慰，只是——說出你看到的東西。
 使用者的焦慮類型是「${r.label}」（${r.name}）。
 焦慮強度：${pct}%。
 他們在測驗中的選擇：
@@ -821,14 +731,10 @@ ${chosenOpts}
       const aiText=data.content&&data.content[0]&&data.content[0].text?data.content[0].text:r.advice;
       loadingEl.classList.remove('visible');
       adviceEl.innerHTML='';
-      // change advice section label for void mode
-      const adviceLbl=document.querySelector('.r-advice-lbl');
-      if(adviceLbl) adviceLbl.textContent=_voidChosen?'它對你說的話':'深淵給你的話';
       let i=0;
       const displayText=aiText.trim();
       const lines=displayText.split('\n');
       let lineIdx=0,charIdx=0;
-      const baseSpeed=_voidChosen?90:55;
       const typeTick=()=>{
         if(lineIdx>=lines.length){return;}
         const line=lines[lineIdx];
@@ -836,10 +742,10 @@ ${chosenOpts}
           adviceEl.innerHTML=lines.slice(0,lineIdx).map(l=>`<span>${l}</span>`).join('<br>')+
             (lineIdx>0?'<br>':'')+'<span>'+line.slice(0,charIdx+1)+'</span>';
           charIdx++;
-          setTimeout(typeTick,baseSpeed+Math.random()*40);
+          setTimeout(typeTick,55+Math.random()*30);
         } else {
           lineIdx++; charIdx=0;
-          if(lineIdx<lines.length) setTimeout(typeTick,_voidChosen?600:200);
+          if(lineIdx<lines.length) setTimeout(typeTick,200);
           else adviceEl.innerHTML=lines.map(l=>`<span>${l}</span>`).join('<br>');
         }
       };
@@ -852,12 +758,9 @@ ${chosenOpts}
 }
 function restartQuiz(){
   cur=0; answers=new Array(QS.length).fill(null); easterEggFired=false; firedKeys.clear();
-  _lastRenderedQ=-1; clearSysMsgHistory(); _pendingEgg=null; _voidChosen=false;
+  _lastRenderedQ=-1; clearSysMsgHistory(); _pendingEgg=null;
   showEl('rcard','none');
   showEl('qcard','block');
-  $('rcard').classList.remove('void-result');
-  const old=document.getElementById('void-noise-lbl');
-  if(old) old.remove();
   $('share-canvas-wrap').classList.remove('visible');
   $('step-lbl').classList.remove('done');
   $('prog-fill').classList.remove('done');
@@ -1295,7 +1198,7 @@ function typeVoidLine(el,text,speed,cb){
 function triggerVoidSequence(){
   if(voidRunning) return;
   voidRunning=true;
-  _voidChosen=true;
+  if(bgmUnlocked&&!bgmMuted) bgm.volume=0.04;
   clearHorrorEvents();
   if(horrorSfxOn) playVoidAmbience();
   const ov=$('void-overlay');
@@ -1469,49 +1372,6 @@ function twType(el,text,speed){
     }
   }
   tick();
-}
-function triggerAnswerHorror(){
-  const prog=cur/QS.length;
-  // 隨機選 1～2 個特效，越後面題目越多特效
-  const pool=[];
-  pool.push('flash');       // 紅色閃光 — 一直有
-  pool.push('whisper');     // 低語字
-  if(prog>=0.2) pool.push('bloodDrip');  // 頂部血滴
-  if(prog>=0.3) pool.push('vignette');   // 暗角脈衝
-  if(prog>=0.4) pool.push('watcher');    // 角落鬼影
-  if(prog>=0.5) pool.push('distort');    // 畫面扭曲
-  // 抽選
-  const shuffle=arr=>arr.sort(()=>Math.random()-.5);
-  const picks=shuffle([...pool]).slice(0, prog>=0.6?3:prog>=0.3?2:1);
-  picks.forEach((fx,fxIdx)=>{
-    const delay=200+fxIdx*350+Math.random()*250;
-    setTimeout(()=>{
-      if(fx==='flash'){
-        const el=document.getElementById('answer-horror-flash');
-        el.style.opacity='0.6';
-        setTimeout(()=>{ el.style.opacity='0'; },120);
-      } else if(fx==='whisper'){
-        triggerWhisperWord();
-      } else if(fx==='bloodDrip'){
-        const el=document.getElementById('answer-blood-drip');
-        el.style.transform='scaleY(1)';
-        setTimeout(()=>{ el.style.transform='scaleY(0)'; },700);
-      } else if(fx==='vignette'){
-        triggerVignettePulse();
-      } else if(fx==='watcher'){
-        triggerShadowWatcher();
-      } else if(fx==='distort'){
-        triggerScreenDistort();
-      }
-    }, delay);
-  });
-  // 快結束時（最後 3 題）加強：心跳加速一下再恢復
-  if(prog>=0.75){
-    setTimeout(()=>{
-      startHeartbeat(Math.min(140, heartBPM+30));
-      setTimeout(()=>startHeartbeat(heartBPM), 1200);
-    }, 800);
-  }
 }
 function shakeScreen(){
   const w=document.querySelector('.wrap');
